@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Ridhima ❤️</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff5f9e,#ffc7d9);
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+width:85%;
+max-width:700px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#ff4081;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff4081;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+}
+
+#msg{
+display:none;
+margin-top:20px;
+line-height:1.8;
+color:#444;
+}
+
+.heart{
+position:absolute;
+font-size:24px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px);}
+100%{transform:translateY(110vh);}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+<h1>🎂 Happy Birthday Ridhima 🎂</h1>
+
+<p>A small surprise made specially for you ❤️</p>
+
+<button onclick="openLetter()">
+Open Birthday Letter 💌
+</button>
+
+<div id="msg">
+<p>
+Dear Ridhima,<br><br>
+
+Happy Birthday! 🎉✨<br><br>
+
+I hope your day is filled with happiness, laughter, and beautiful memories.
+
+You are one of the most kind and caring people I've ever met, and I genuinely wish that all your dreams come true.
+
+May this year bring you success, peace, good health, and countless reasons to smile.
+
+Keep shining, keep growing, and keep being the wonderful person you are.
+
+Enjoy your special day to the fullest. ❤️
+
+<br><br>
+Happy Birthday once again! 🎂✨
+<br><br>
+— Raj
+</p>
+</div>
+</div>
+
+<script>
+
+function openLetter(){
+document.getElementById("msg").style.display="block";
+}
+
+function heart(){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+}
+
+setInterval(heart,300);
+
+</script>
+
+</body>
+</html>
